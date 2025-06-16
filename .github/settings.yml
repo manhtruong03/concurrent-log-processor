@@ -1,0 +1,194 @@
+repository:
+    # See https://developer.github.com/v3/repos/#edit for all available settings.
+
+    # The name of the repository. Changing this will rename the repository
+    #name: repo-name
+
+    # A short description of the repository that will show up on GitHub
+    #description: description of repo
+
+    # A URL with more information about the repository
+    #homepage: https://example.github.io/
+
+    # A comma-separated list of topics to set on the repository
+    #topics: project, template, 
+
+    # Either `true` to make the repository private, or `false` to make it public.
+    #private: false
+
+    # Either `true` to enable issues for this repository, `false` to disable them.
+    #has_issues: true
+
+    # Either `true` to enable the wiki for this repository, `false` to disable it.
+    #has_wiki: true
+
+    # Either `true` to enable downloads for this repository, `false` to disable them.
+    #has_downloads: true
+
+    # Updates the default branch for this repository.
+    #default_branch: master
+
+    # Either `true` to allow squash-merging pull requests, or `false` to prevent
+    # squash-merging.
+    #allow_squash_merge: true
+
+    # Either `true` to allow merging pull requests with a merge commit, or `false`
+    # to prevent merging pull requests with merge commits.
+    #allow_merge_commit: true
+
+    # Either `true` to allow rebase-merging pull requests, or `false` to prevent
+    # rebase-merging.
+    #allow_rebase_merge: true
+
+# Labels: define labels for Issues and Pull Requests
+labels:
+    # type
+    - name: "type: bug"
+      color: d73a4a
+      description": "Something isn't working as expected."
+
+    - name: "type: feature"
+      color: 4a90e2
+      description": "A new feature or functionality for the end-user."
+
+    - name: "type: question"
+      color: d876e3
+      description": "Further information is requested or a question is being asked."
+
+    - name: "type: chore"
+      color: cccccc
+      description": "Maintenance, setup, or tasks that don't change production code."
+
+    - name: "type: documentation"
+      color: 006b75
+      description": "Tasks related to writing or updating documentation."
+
+    - name: "type: refactor"
+      color: a266ff
+      description": "A code change that neither fixes a bug nor adds a feature."
+
+    - name: "type: testing"
+      color: f4e04d
+      description": "Tasks related to adding or updating tests."
+
+    # priority
+    - name: "priority: critical"
+      color: b60205
+      description": "Must be fixed immediately. Blocks release or critical functionality."
+
+    - name: "priority: high"
+      color: d93f0b
+      description": "Should be resolved in the current work cycle."
+
+    - name: "priority: medium"
+      color: fbca04
+      description": "Default priority. To be addressed in the normal workflow."
+
+    - name: "priority: low"
+      color: 0e8a16
+      description": "Nice to have. Can be postponed."
+
+    # status
+    - name: "status: needs-review"
+      color: d4c5f9
+      description": "A pull request is ready for code review."
+
+    - name: "status: in-progress"
+      color: fef2c0
+      description": "This issue is actively being worked on."
+
+    - name: "status: blocked"
+      color: 000000
+      description": "Cannot proceed. Blocked by another issue."
+
+    - name: "status: wontfix"
+      color: ffffff
+      description": "This will not be worked on."
+
+    - name: "status: duplicate"
+      color: cfd3d7
+      description": "This issue or pull request already exists."
+
+    # area
+    - name: "area: frontend"
+      color: 61dafb
+      description": "Related to the user interface (React, Vue, Angular, HTML/CSS)."
+
+    - name: "area: backend"
+      color: f7b93e
+      description": "Related to server-side logic, APIs, and business rules."
+
+    - name: "area: database"
+      color: 0052cc
+      description": "Related to database schema, migrations, or queries."
+
+    - name: "area: auth"
+      color: 1d1d1d
+      description": "Related to authentication, authorization, and user permissions."
+
+    - name: "area: ci-cd"
+      color: 2088ff
+      description": "Related to the Continuous Integration/Deployment pipeline."
+
+
+# # Collaborators: give specific users access to this repository.
+# # See https://developer.github.com/v3/repos/collaborators/#add-user-as-a-collaborator for available options
+# collaborators:
+#   # - username: bkeepers
+#   #   permission: push
+#   # - username: hubot
+#   #   permission: pull
+
+#   # Note: `permission` is only valid on organization-owned repositories.
+#   # The permission to grant the collaborator. Can be one of:
+#   # * `pull` - can pull, but not push to or administer this repository.
+#   # * `push` - can pull and push, but not administer this repository.
+#   # * `admin` - can pull, push and administer this repository.
+#   # * `maintain` - Recommended for project managers who need to manage the repository without access to sensitive or destructive actions.
+#   # * `triage` - Recommended for contributors who need to proactively manage issues and pull requests without write access.
+
+# # See https://developer.github.com/v3/teams/#add-or-update-team-repository for available options
+# teams:
+#   - name: core
+#     # The permission to grant the team. Can be one of:
+#     # * `pull` - can pull, but not push to or administer this repository.
+#     # * `push` - can pull and push, but not administer this repository.
+#     # * `admin` - can pull, push and administer this repository.
+#     # * `maintain` - Recommended for project managers who need to manage the repository without access to sensitive or destructive actions.
+#     # * `triage` - Recommended for contributors who need to proactively manage issues and pull requests without write access.
+#     permission: admin
+#   - name: docs
+#     permission: push
+
+# branches:
+#   - name: master
+#     # https://developer.github.com/v3/repos/branches/#update-branch-protection
+#     # Branch Protection settings. Set to null to disable
+#     protection:
+#       # Required. Require at least one approving review on a pull request, before merging. Set to null to disable.
+#       required_pull_request_reviews:
+#         # The number of approvals required. (1-6)
+#         required_approving_review_count: 1
+#         # Dismiss approved reviews automatically when a new commit is pushed.
+#         dismiss_stale_reviews: true
+#         # Blocks merge until code owners have reviewed.
+#         require_code_owner_reviews: true
+#         # Specify which users and teams can dismiss pull request reviews. Pass an empty dismissal_restrictions object to disable. User and team dismissal_restrictions are only available for organization-owned repositories. Omit this parameter for personal repositories.
+#         dismissal_restrictions:
+#           users: []
+#           teams: []
+#       # Required. Require status checks to pass before merging. Set to null to disable
+#       required_status_checks:
+#         # Required. Require branches to be up-to-date before merging.
+#         strict: true
+#         # Required. The list of status checks to require in order to merge into this branch
+#         contexts: []
+#       # Required. Enforce all configured restrictions for administrators. Set to true to enforce required status checks for repository administrators. Set to null to disable.
+#       enforce_admins: true
+#       # Prevent merge commits from being pushed to matching branches
+#       required_linear_history: true
+#       # Required. Restrict who can push to this branch. Team and user restrictions are only available for organization-owned repositories. Set to null to disable.
+#       restrictions:
+#         apps: []
+#         users: []
+#         teams: []

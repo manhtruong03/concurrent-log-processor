@@ -1,0 +1,103 @@
+################################################################################
+#                                                                              #
+#                            CODEOWNERS Template                               #
+#                                                                              #
+#  This file is a template for assigning code ownership in your repository.    #
+#  To use it, uncomment the relevant lines and replace the placeholders        #
+#  (e.g., @your-username, @your-org/your-team) with actual GitHub usernames or  #
+#  team names.                                                                 #
+#                                                                              #
+#  - Lines starting with '#' are comments.                                     #
+#  - The last matching pattern takes the most precedence.                      #
+#  - For more details, see the GitHub documentation on CODEOWNERS.             #
+#                                                                              #
+################################################################################
+
+
+#-------------------------------------------------------------------------------
+# Global Owners
+#
+# These owners are the default for all files in the repository. It's a good
+# practice to set a core team or a few key individuals as default reviewers.
+# This acts as a safety net for any files not matched by more specific rules.
+#
+# Tip: Replace with your organization's core engineering or maintenance team.
+#-------------------------------------------------------------------------------
+* @manhtruong03
+
+
+#-------------------------------------------------------------------------------
+# Documentation
+#
+# Assign ownership for all documentation files. This typically includes all
+# files within the /docs directory and top-level markdown files.
+#-------------------------------------------------------------------------------
+# /docs/          @your-org/documentation-team
+# README.md       @your-org/documentation-team
+# CONTRIBUTING.md @your-org/documentation-team
+
+
+#-------------------------------------------------------------------------------
+# Infrastructure and CI/CD
+#
+# Owns configuration for infrastructure (e.g., Terraform, Docker) and
+# continuous integration workflows (e.g., GitHub Actions).
+#-------------------------------------------------------------------------------
+# .github/workflows/   @your-org/devops-team
+# Dockerfile           @your-org/devops-team
+# docker-compose.yml   @your-org/devops-team
+# /terraform/          @your-org/devops-team
+
+
+#-------------------------------------------------------------------------------
+# Application or Service Owners
+#
+# Define owners for specific parts of your application. Use this section to
+# map directories to the teams or individuals responsible for them.
+#
+# Example:
+# /src/api/              @your-org/backend-team
+# /src/web/              @your-org/frontend-team
+# /packages/database/    @your-org/data-engineering-team
+#-------------------------------------------------------------------------------
+# /src/service-a/    @your-org/team-a
+# /src/service-b/    @your-org/team-b
+# /apps/mobile-app/  @your-mobile-developer-username
+
+
+#-------------------------------------------------------------------------------
+# File Type Owners
+#
+# Assign owners based on file extensions. This is useful for cross-cutting
+# concerns where a specific group owns a technology across the entire repo.
+#
+# Example:
+# *.js      @your-org/frontend-team
+# *.go      @your-org/backend-team
+# *.sql     @your-org/data-engineering-team
+# *.proto   @your-org/api-design-reviewers
+#-------------------------------------------------------------------------------
+# *.css     @your-ui-ux-designer-username
+# *.py      @your-org/python-guild
+
+
+#-------------------------------------------------------------------------------
+# Advanced Patterns & Exceptions
+#
+# Use more complex patterns to handle special cases.
+#
+# Example 1: A team owns all log directories, wherever they are.
+# **/logs/  @your-org/sre-team
+#
+# Example 2: A team owns the /apps directory, but a specific sub-team owns a
+# subdirectory within it.
+# /apps/               @your-org/platform-team
+# /apps/internal-tool/ @your-org/internal-tools-team
+#
+# Example 3: Leave a directory without an owner, overriding the global owner.
+# This means any write-access user can approve PRs for this directory.
+# /experimental/
+#-------------------------------------------------------------------------------
+# **/scripts/   @your-org/automation-team
+# /config/      @your-org/security-team
+
